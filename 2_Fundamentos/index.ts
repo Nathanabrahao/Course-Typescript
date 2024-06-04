@@ -1,9 +1,7 @@
-let x: number = 10
+const x: number = 5
 
+const numberToString = x.toString()
 
-console.log(x)
+const printMyNumber: string = `Eu vou imprimir o número ${numberToString}`
 
-
-
-console.log(typeof x)
-
+console.log(printMyNumber)
