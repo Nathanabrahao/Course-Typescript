@@ -15,4 +15,4 @@ function soma(a:number, b:number){
 }
 
 
-console.log(soma(1, 2))
+console.log(soma(1, 2)) 
