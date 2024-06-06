@@ -11,3 +11,6 @@ const coordObj = {
     z: 20
 };
 showCoords(coordObj);
+//non-null
+const p = document.getElementById("some-p");
+console.log(p.innerText);

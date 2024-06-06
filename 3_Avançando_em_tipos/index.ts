@@ -31,3 +31,8 @@ const coordObj:Point = {
 showCoords(coordObj)
 
 
+//non-null
+
+const p = document.getElementById("some-p")
+
+console.log(p!.innerText)
