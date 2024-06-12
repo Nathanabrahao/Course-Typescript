@@ -129,5 +129,5 @@ function showProductDetails({name: productName, price: productPrice}: {name: str
 
 const shirt = {name: "Camisa", price: 45.21}
 
-
 console.log(showProductDetails(shirt))
+
