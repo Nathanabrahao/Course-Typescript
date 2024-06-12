@@ -41,4 +41,31 @@ const trunks = {
     superpowers: ["Masenko", "Burning Attack"]
 };
 console.log(trunks);
-//6 - 
+const arnold = {
+    name: "Arnold",
+    type: "Shotgun",
+    caliber: 12
+};
+console.log(arnold);
+console.log(arnold.type);
+//7 - ReadOnlyArray
+let myArray = ["Maça", "Laranja", "Banana"];
+console.log(myArray);
+//impossibilita modificações
+myArray.forEach((item) => {
+    console.log("Fruta:" + item);
+});
+myArray = myArray.map((item) => {
+    return `Fruta: ${item}`;
+});
+console.log(myArray);
+const myNumberArray = [1, 2, 3, 4, 5];
+console.log(myNumberArray);
+const anotherUser = ["Nathan", 23];
+console.log(anotherUser[0]);
+//9 - Tupla with Readonly
+function showNumbers(numbers) {
+    console.log(numbers[0]);
+    console.log(numbers[1]);
+}
+showNumbers([1, 2]);

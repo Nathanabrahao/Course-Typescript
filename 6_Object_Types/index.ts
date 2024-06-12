@@ -89,10 +89,74 @@ const trunks: SuperHuman = {
     name: "trunks",
     age: 25,
     superpowers: ["Masenko", "Burning Attack"]
-} 
+}
 
 console.log(trunks)
 
 
-//6 - 
+//6 - intersection types
+interface Character {
+    name: string
+}
+
+interface Gun {
+    type: string
+    caliber: number
+}
+
+
+type HumanWithGun = Character & Gun
+
+
+const arnold: HumanWithGun = {
+    name: "Arnold",
+    type: "Shotgun",
+    caliber: 12
+}
+
+console.log(arnold)
+
+console.log(arnold.type)
+
+//7 - ReadOnlyArray
+
+let myArray: ReadonlyArray<string> = ["Maça", "Laranja", "Banana"]
+
+console.log(myArray)
+
+//impossibilita modificações
+
+myArray.forEach((item) => {
+    console.log("Fruta:" + item)
+}
+)
+
+myArray = myArray.map((item) => {
+    return `Fruta: ${item}`
+})
+
+console.log(myArray)
+
+//8 - tuplas 
+type fiveNumbers = [number, number, number, number, number]
+
+const myNumberArray: fiveNumbers = [1, 2, 3, 4, 5]
+
+console.log(myNumberArray)
+
+type nameAndAge = [string, number]
+
+const anotherUser: nameAndAge = ["Nathan", 23]
+
+console.log(anotherUser[0])
+
+
+//9 - Tupla with Readonly
+function showNumbers(numbers: readonly [number, number]){
+    console.log(numbers[0])
+    console.log(numbers[1])
+}
+
+
+showNumbers([1, 2])
 
