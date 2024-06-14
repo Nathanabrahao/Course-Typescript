@@ -53,11 +53,11 @@ console.log(getSomeKey(server, 'ram')) */
 //Comentado pois está reclamando a key mas está funcionando o código
 
 //5 - keyof type operator
-type Character = {name: string, age: number, hasDriveLicense: boolean}
+type Character = { name: string, age: number, hasDriveLicense: boolean }
 
 type C = keyof Character
 
-function showCharName(obj: Character, name: C){
+function showCharName(obj: Character, name: C) {
     return `${obj[name]}`
 }
 
@@ -69,6 +69,40 @@ const myChar: Character = {
 
 
 console.log(showCharName(myChar, 'name'))
+
+
+
+// 6 - conditional types
+
+interface A { }
+
+interface B extends A { }
+
+interface Teste {
+    showName(): string
+}
+
+
+type myType = B extends A ? number : string
+
+const someVar: myType = 5
+
+type myTypeB = Teste extends { showName(): string } ? string : boolean
+
+
+// 7 - template literals type
+
+type testA = "text"
+
+type CustomType = `some ${testA}`
+
+const testing: CustomType = "some text"
+
+
+type a1 = "Testando"
+type a2 = "Union"
+
+type a3 = `${a1}` | `${a2}`
 
 
 

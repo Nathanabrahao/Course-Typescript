@@ -26,3 +26,5 @@ const myChar = {
     hasDriveLicense: true
 };
 console.log(showCharName(myChar, 'name'));
+const someVar = 5;
+const testing = "some text";
