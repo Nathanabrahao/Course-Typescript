@@ -134,4 +134,4 @@ const cInstance = new C();
 console.log(cInstance.x);
 const dInstance = new C();
 console.log(dInstance.x);
-//
+//10 - protected
