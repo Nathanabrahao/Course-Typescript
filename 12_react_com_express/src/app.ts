@@ -71,6 +71,25 @@ app.get("/api/product/:id", (req: Request, res: Response) => {
     }
 })
 
+//8- rotas complexas
+app.get("/api/product/:id/review/:reviewId", (req: Request, res: Response) =>{
+    console.log(req.params);
+
+    const productId = req.params.id;
+    const reviewId = req.params.reviewId;
+
+    return res.send(`Acessando a review ${reviewId} do produto ${productId}`)
+})
+
+//9- router handler
+function getUser(req: Request, res: Response) {
+    console.log(`Resgatando o usuario com id: ${req.params.id}`)
+
+    return res.send(`O usuario foi encontrado`)
+}
+
+app.get("/api/user/:id", getUser)
+
 
 app.listen(3000, () => {
     console.log("Aplicação de TS + Express funcionando!")
